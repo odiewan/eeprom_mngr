@@ -8,6 +8,36 @@ eeprom_datum::eeprom_datum() {
 
 
 //-----------------------------------------------------------------------------
+eeprom_datum::eeprom_datum(String nName, uint8_t nIdx, bool nVal) {
+  constructor_core();
+  edo_index = nIdx;
+  edo_name = nName;
+  edo_val = nVal;
+  set_eeprom_val(edo_val);
+
+}
+
+//-----------------------------------------------------------------------------
+eeprom_datum::eeprom_datum(String nName, uint8_t nIdx, uint8_t nVal) {
+  constructor_core();
+  edo_index = nIdx;
+  edo_name = nName;
+  edo_val = nVal;
+  edo_eeprom_val = nVal;
+
+}
+
+
+//-----------------------------------------------------------------------------
+eeprom_datum::eeprom_datum(String nName, uint8_t nIdx, int8_t nVal) {
+  constructor_core();
+  edo_index = nIdx;
+  edo_name = nName;
+  edo_val = nVal;
+  edo_eeprom_val = nVal;
+  set_eeprom_val(edo_val);
+}
+//-----------------------------------------------------------------------------
 eeprom_datum::eeprom_datum(String nName, uint8_t nIdx, bool nVal, bool nDefVal) {
   constructor_core();
   edo_index = nIdx;

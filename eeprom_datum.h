@@ -23,6 +23,10 @@ class eeprom_datum {
     eeprom_datum(String nName, uint8_t nIdx, uint8_t nVal, uint8_t nDefVal);
     eeprom_datum(String nName, uint8_t nIdx, int8_t nVal, int8_t nDefVal);
 
+    eeprom_datum(String nName, uint8_t nIdx, bool nVal);
+    eeprom_datum(String nName, uint8_t nIdx, uint8_t nVal);
+    eeprom_datum(String nName, uint8_t nIdx, int8_t nVal);
+
     int8_t get_eng_val();
     void set_eng_val(bool nV);
     void set_eng_val(uint8_t nV);
